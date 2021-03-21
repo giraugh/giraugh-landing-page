@@ -1,0 +1,24 @@
+{
+  "name": "giraugh-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page for giraugh.xyz",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./public/index.html",
+    "build": "parcel build ./public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giraugh/giraugh-landing-page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giraugh/giraugh-landing-page/issues"
+  },
+  "homepage": "https://github.com/giraugh/giraugh-landing-page#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
