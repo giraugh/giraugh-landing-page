@@ -8,29 +8,31 @@ window.onload = () => {
     return el
   }
 
+  const createBreak = () =>
+    document.createElement('br')
+
   const addText = (text) => {
     if (text.length > 0) {
       const el = text.shift()
       textContainer.appendChild(el)
-      setTimeout(_ => addText(text), 100)
+      setTimeout(_ => addText(text), 80)
     }
   }
 
   // Create github link prompt
-  const br = document.createElement('br')
   const link = document.createElement('a')
-  link.innerHTML = 'this?'
+  link.innerHTML = 'this'
   link.href = 'http://github.com/giraugh'
   let ghPrompt = [
-    br,
-    br,
+    createBreak(),
     ...'or perhaps '.split('').map(createTextSpan),
-    link
+    link,
+    createTextSpan('?')
   ]
 
   // Create bonus prompt
   const bonusPrompt = [
-    br,
+    createBreak(),
     ...'okay, nevermind then.'.split('').map(createTextSpan)
   ]
 
