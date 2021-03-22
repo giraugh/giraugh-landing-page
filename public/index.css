@@ -1,0 +1,39 @@
+* {
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+}
+
+#giraffe-logo {
+  position: absolute;
+  width: 50vw;
+  left: -3px;
+  bottom: -3px;
+  overflow: hidden;
+}
+
+#text {
+  position: absolute;
+  font-family: arial;
+  top: 60vh;
+  left: 50vw;
+  color: darkgrey;
+  text-decoration: none;
+  font-size: 2em;
+}
+
+#text a {
+  color: black !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  #giraffe-logo {
+    width: 70vw;
+  }
+
+  #text {
+    font-size: 1.8em;
+    top: 30vh;
+    left: 10vw;
+  }
+}
