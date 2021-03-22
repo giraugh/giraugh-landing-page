@@ -1,1 +1,46 @@
-console.log('hi')
+window.onload = () => {
+  // Locate parent
+  const textContainer = document.querySelector('#text')
+
+  const createTextSpan = c => {
+    const el = document.createElement('span')
+    el.innerText = c
+    return el
+  }
+
+  const addText = (text) => {
+    if (text.length > 0) {
+      const el = text.shift()
+      textContainer.appendChild(el)
+      setTimeout(_ => addText(text), 100)
+    }
+  }
+
+  // Create github link prompt
+  const br = document.createElement('br')
+  const link = document.createElement('a')
+  link.innerHTML = 'this?'
+  link.href = 'http://github.com/giraugh'
+  let ghPrompt = [
+    br,
+    br,
+    ...'or perhaps '.split('').map(createTextSpan),
+    link
+  ]
+
+  // Create bonus prompt
+  const bonusPrompt = [
+    br,
+    ...'okay, nevermind then.'.split('').map(createTextSpan)
+  ]
+
+  // Run effect after a delay
+  setTimeout(() => {
+    addText(ghPrompt)
+  }, 2000)
+
+  // Run bonus effect after a bigger delay
+  setTimeout(() => {
+    addText(bonusPrompt)
+  }, 20000)
+}

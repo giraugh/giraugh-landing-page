@@ -32,8 +32,10 @@
   }
 
   #text {
-    font-size: 1.8em;
+    font-size: 1.7em;
     top: 30vh;
-    left: 10vw;
+    left: 0;
+    width: 100vw;
+    text-align: center;
   }
 }
